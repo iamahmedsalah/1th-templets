@@ -1,0 +1,262 @@
+/* globle rules  */
+* { 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    
+}
+body{
+ font-family: 'Work Sans', sans-serif;
+}
+
+/* Medium devices  */
+@media (min-width: 768px) { .container{
+    width: 750px; ;
+} }
+
+/*  Large devices  */
+@media (min-width: 992px) { .container{
+    width: 970px ;
+} }
+
+/* X-Large devices  */
+@media (min-width: 1200px) { .container{
+    width: 1170px ;
+} }
+ /* full screen  */
+@media (min-width:1500px ) {.container {
+     width: 1470px;
+}}
+/* Start Components  */
+.Special-heading{ color: #ebeced;
+    font-size: 70px;
+    margin: 0;
+   text-align: center;
+  letter-spacing: -3.5px;
+}
+.Special-heading + p { margin: -30px 0 0;
+    text-align: center;
+    font-size: 20px;
+    color:rgb(150, 162, 214) ;
+
+
+}
+
+/* End Components */
+.header{padding: 20px;}
+
+.container{
+    display: flex;
+    justify-content: space-between; }
+    
+.header .logo{ width: 100px;
+}
+.header .links{ position: relative;
+}
+.header .links ul{ list-style: none;
+margin:0;
+padding: 0;
+background-color: rgb(150, 162, 214);
+position: absolute;
+right: 0;
+top: calc(100% + 14px);
+min-width: 200px;
+display: none;
+z-index: 1;
+
+}
+.header .links ul::before {
+    content:"" ;
+    border-width: 5px;
+    border-style: solid;
+    right: 5px;
+    top: -10px;
+  border-color: transparent transparent #f6f6f6 transparent;
+  position: absolute;
+}
+.header .links:hover ul { display: block;}
+.header .links ul li a { display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+    transition:  0.3s ;
+}
+.header .links ul li a:hover {
+    padding-left: 25px;
+}
+.header .links ul li:not(:last-child) a {
+    border-bottom: 1px solid rgb(11, 5, 68) ;
+}
+/* Start land  */
+.land{ background-image: url(../image/lightning-flash-bolt-or-thunderbolt-blue-vector-25137307.jpg);
+    background-size: cover;
+    height: calc(100vh - 120px);
+    position: relative;
+    
+}
+.land .intro h1{ margin: 0;
+    font-size: 30px;
+    color: rgb(150, 162, 214);
+    font-weight: bold;
+}
+.land .intro {text-align: center;
+    padding-top: 40px;
+}
+.land .intro p { color: rgb(150, 162, 214);
+    font-size: 25px;
+}
+/* <!-- Start grid  --> */
+.grid{ padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left :20px;
+    background-color: rgb(150, 162, 214);
+}
+.grid .container{ display: grid;
+    grid-template-columns: repeat( auto-fill , minmax(350px , 1fr));
+    grid-gap: 30px;
+    text-align: center;
+
+}
+.grid .container i { color: rgb(22, 41, 128);}
+.grid .container h3 { color:  rgb(22, 41, 128);}
+.grid .container p { line-height:  1.5; 
+     color:  rgb(22, 41, 128);
+     font-weight: 300;
+    }
+    
+    /* Start Services */
+    .Services {padding-top: 30px;
+        padding-bottom: 30px;}
+.Services-content{ display: grid;
+        grid-template-columns: repeat( auto-fill , minmax(300px , 1fr));
+        grid-gap: 50px;
+       margin-top: 100px;
+       padding-left: 30px;
+    }
+.Services .Services-content .srv { display: flex;
+        margin-bottom: 50px;
+    }
+.Services .Services-content .srv i { color:rgb(22, 41, 128) ;
+        flex-basis: 60px;    }
+.Services .Services-content .srv .text {flex: 1;}
+.Services .Services-content .srv .text h3  { color: rgb(22, 41, 128);
+    margin:  0 0 20px; }
+.Services .Services-content .srv .text p { color: #777;
+font-weight: 300; }
+.Services .Services-content .image { text-align: center;
+transform: translate(220px,50px) ;
+position: relative;
+
+}
+.Services .Services-content .image::before {
+    content: "";
+    background-color:rgb(22, 41, 128) ;
+    width: 100px;
+     height: calc(100% + 150px);
+     top: -75px;
+     position: absolute;
+     right: 0;
+     z-index: -1;
+     
+}
+ /* Services End */
+    @media (max-width: 1199px) { .image-col { display: none}; ; }
+ /* Start portfolio */
+.portfolio{ padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #f6f6f6;
+   }
+    .portfolio .portfolio-content {
+        display: grid;
+        grid-template-columns: repeat( auto-fill , minmax(350px , 1fr));
+        grid-gap: 50px;
+        margin-top: 80px;
+        
+        
+    }
+    .portfolio .portfolio-content .card {background-color: white;
+        /* transform: translateX(50%); */
+        margin-left: 20px;
+        margin-right: 20px;
+       
+    
+}
+.portfolio .portfolio-content .card img{ max-width: 100%;
+    
+
+}
+.portfolio .portfolio-content .card .info {
+    padding: 20px;
+}
+.portfolio .portfolio-content .card .info h3{ margin: 0;
+    color: rgb(22, 41, 128);
+}
+.portfolio .portfolio-content .card .info p {
+    color:rgb(150, 162, 214) ;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+ /* End portfolio */
+.cont{ padding-left: 30px;
+    padding-right: 30px;
+    margin-right: auto;
+    margin-left:auto ;}
+    /* Start about */
+    .About { padding-top: 40px;
+        padding-bottom:  40px;}
+        .About-content {
+            margin-top: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    .About-content .image { position:relative;
+        width: 250px;
+        height: 375;
+    }
+    .About-content .image img{max-width: 100%;}
+    .About-content .image::before{
+        content: "";
+        position:absolute ;
+        background-color:rgb(150, 162, 214) ;
+        width: 100px;
+        height: calc(100% + 20px);
+        top: -40px;
+        left: -20px;
+        z-index: -1;    
+    }
+    .About-content .text { flex-basis: calc(100% - 350px);
+    }
+    .About-content .text p:first-of-type{font-weight: bold;
+        line-height: 2;
+        margin-bottom: 59px;
+
+    }
+    .About-content .text hr {
+      width: 50%;
+      border-color: rgb(150, 162, 214) ;
+      display: inline-block;
+
+    }
+    .About-content .text p:last-of-type { line-height: 2;
+        color:rgb(150, 162, 214) ;
+
+    }
+    @media (max-width:900px) { .About-content{
+        flex-direction: column;
+        text-align: center;}}
+        @media (max-width:900px) { .About-content .image img ,
+            .About-content .image::before {
+   display: none; } }
+   html { scroll-behavior: smooth;}
+     /* End about */
+     footer { color:rgb(150, 162, 214)  ;
+    text-align: center;
+    background-color:rgb(22, 41, 128)  ;
+    padding: 30px 10px;
+    margin-top: 50px;
+}
+footer span {
+    font-weight: bold;
+    color:rgb(150, 162, 214) ;
+}    
